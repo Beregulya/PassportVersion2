@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistrationController">
+   <children>
+      <GridPane alignment="CENTER" cacheShape="false" hgap="30.0" minWidth="450.0" prefHeight="165.0" prefWidth="390.0" vgap="15.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="280.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username:" textAlignment="CENTER" />
+            <Label text="Password:" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Age:" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Country:" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <TextField fx:id="usernameField" promptText="print your username here..." GridPane.columnIndex="1" />
+            <TextField fx:id="passwordField" promptText="print your password here..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="ageField" promptText="print your age here..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="countryField" promptText="print your country here..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <Label text="* All fields must be filled." textFill="#f80101" />
+      <HBox alignment="CENTER" spacing="100.0">
+         <children>
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#onActionSubmitButton" text="Submit" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onActionCloseButton" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>
